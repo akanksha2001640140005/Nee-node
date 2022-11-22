@@ -61,3 +61,10 @@ app.get(
     res.json({ user: req.user });
   }
 );
+//default paths
+app.get("/", (req, res) => {
+  res.json({message:'welcome'});
+});
+app.get("*", (req, res) => {
+  res.send("<h1>Page Not Found ! </h1>");
+});
