@@ -6,7 +6,7 @@ require("./passportConfig")(passport);
 const app = express();
 
 const PORT = 3600;
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log("server is running.");
 });
 //connect to db
